@@ -2,20 +2,24 @@ const playNow = getElementById("play_now");
 const playAgain = getElementById("play_again");
 let score = 0;
 let life = 5;
+
 function randomAlphaBet() {
   const alphabets = "abcdefghijklmnopqrstuvwxyz";
   const alphabetSplits = alphabets.split("");
   const indexCreate = Math.floor(Math.random() * 25);
   return alphabetSplits[indexCreate];
 }
+
 function highLightKey(id) {
   const key = getElementById(id);
   addClassList(key, "bg-violet-700");
 }
+
 function removeHightLightKey(id) {
   const key = getElementById(id);
   removeClassList(key, "bg-violet-700");
 }
+
 function gameOn() {
   const getRandomAlphabet = randomAlphaBet();
   const characterDisplay = getElementById("character_display");
